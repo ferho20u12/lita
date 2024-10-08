@@ -6,8 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #e4bdff 50%, #a92dff 75%);
+    background-image: url('../public/images/background.jpg');
 }
 
 /* Contenedor general */
