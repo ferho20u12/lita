@@ -2,33 +2,22 @@ window.onload = function() {
     var audio = document.getElementById("miCancion");
     audio.play();
 };
-window.onload = function() {
-    let images = document.querySelectorAll('.image');
-    let index = 0;
+let currentSlide = 0;
 
-    function showImages() {
-        // Oculta todas las imágenes
-        images.forEach(img => img.style.opacity = 0);
+function showSlide(index) {
+    const slides = document.querySelectorAll('.carousel-item');
+    const totalSlides = slides.length;
 
-        // Muestra las imágenes de acuerdo al tamaño de pantalla
-        if (window.innerWidth > 768) {
-            // Para escritorio, mostrar dos imágenes
-            images[index].style.opacity = 1;
-            if (images[index + 1]) {
-                images[index + 1].style.opacity = 1;
-            }
-        } else {
-            // Para móvil, mostrar solo una imagen
-            images[index].style.opacity = 1;
-        }
+    // Asegúrate de que el índice esté en el rango correcto
+    currentSlide = (index + totalSlides) % totalSlides; // Ciclamos el índice
+    const offset = -currentSlide * 100; // Calculamos el desplazamiento
+    const carouselInner = document.querySelector('.carousel-inner');
+    carouselInner.style.transform = `translateX(${offset}%)`; // Desplazamos el carrusel
+}
 
-        // Actualiza el índice
-        index = (index + (window.innerWidth > 768 ? 2 : 1)) % images.length;
-    }
+function moveSlide(direction) {
+    showSlide(currentSlide + direction);
+}
 
-    // Llama a la función showImages cada 3 segundos
-    setInterval(showImages, 4000);
-
-    // Inicia mostrando las primeras imágenes
-    showImages();
-};
+// Inicializa el carrusel mostrando la primera imagen
+showSlide(currentSlide);

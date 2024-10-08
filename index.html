@@ -3,59 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Mi Novia</title>
+    <title>Perro salchica gordo bachicha</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./public/ico/favicon.ico">
+    <!-- Incluir Glide.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.theme.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
 </head>
 <body>
     <audio id="miCancion" src="./public/music/post_malone_allergic.mp3" autoplay loop></audio>
-    
+
     <div class="container">
         <div class="content">
             <div class="image-container">
                 <div class="favorite-item">
                     <h3>Flor Favorita</h3>
+                    <p>Tu sonrisa ilumina mi día</p>
                     <div class="box">
                         <img src="./public/images/sunflower.jpg" alt="Imagen 2" class="image" id="image2">
                     </div>
                 </div>
                 <div class="favorite-item">
                     <h3>Lugar Favorito</h3>
+                    <p>Recuerdos de nuestro primer viaje</p>
                     <div class="box">
                         <img src="./public/images/place.jpg" alt="Imagen 1" class="image" id="image1">
                     </div>
                 </div>
                 <div class="favorite-item">
                     <h3>Estación del Año</h3>
+                    <p>Los colores que me recuerdan a ti</p>
                     <div class="box">
                         <img src="./public/images/season.jpg" alt="Imagen 3" class="image" id="image3">
                     </div>
                 </div>
                 <div class="favorite-item">
                     <h3>Comida Favorita</h3>
+                    <p>Siempre juntos en la mesa</p>
                     <div class="box">
                         <img src="./public/images/food.jpg" alt="Imagen 4" class="image" id="image4">
                     </div>
                 </div>
                 <div class="favorite-item">
                     <h3>Pasatiempo</h3>
+                    <p>Compartiendo momentos inolvidables</p>
                     <div class="box">
                         <img src="./public/images/hobby.jpg" alt="Imagen 5" class="image" id="image5">
                     </div>
                 </div>
                 <div class="favorite-item">
                     <h3>Personaje</h3>
+                    <p>Un personaje especial en nuestra historia</p>
                     <div class="box">
                         <img src="./public/images/character.jpg" alt="Imagen 6" class="image" id="image6">
                     </div>
                 </div>
                 <div class="favorite-item">
-                    <h3>Personaje</h3>
+                    <h3>Personaje Real</h3>
+                    <p>Tu heroína en la vida real</p>
                     <div class="box">
                         <img src="./public/images/character_real.jpg" alt="Imagen 7" class="image" id="image7">
                     </div>
                 </div>
                 <div class="favorite-item">
                     <h3>Lugar Donde Todo Empezó</h3>
+                    <p>Donde comenzó nuestra aventura</p>
                     <div class="box">
                         <img src="./public/images/cucei.jpg" alt="Imagen 8" class="image" id="image8">
                     </div>
@@ -65,10 +78,58 @@
 
         <div class="album">
             <h3>Álbum de Fotos</h3>
-            <!-- Aquí colocas el slice -->
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <img src="./assets/images/IMG_1.jpg" alt="Imagen 1">
+                            <p>Texto para la imagen 1</p>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="./assets/images/IMG_2.jpg" alt="Imagen 2">
+                            <p>Texto para la imagen 2</p>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="./assets/images/IMG_3.jpg" alt="Imagen 3">
+                            <p>Texto para la imagen 3</p>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="./assets/images/IMG_4.jpg" alt="Imagen 4">
+                            <p>Texto para la imagen 4</p>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="./assets/images/IMG_5.jpg" alt="Imagen 5">
+                            <p>Texto para la imagen 5</p>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="./assets/images/IMG_6.jpg" alt="Imagen 6">
+                            <p>Texto para la imagen 6</p>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="./assets/images/IMG_7.jpg" alt="Imagen 7">
+                            <p>Texto para la imagen 7</p>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="./assets/images/IMG_8.jpg" alt="Imagen 8">
+                            <p>Texto para la imagen 8</p>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="./assets/images/IMG_9.jpg" alt="Imagen 9">
+                            <p>Texto para la imagen 9</p>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="./assets/images/IMG_10.jpg" alt="Imagen 10">
+                            <p>Texto para la imagen 10</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
+    <script>
+        new Glide('.glide').mount();
+    </script>
     <script src="./js/scripts.js"></script>
 </body>
 </html>
