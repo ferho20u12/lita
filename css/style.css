@@ -6,18 +6,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* Para alinear los elementos verticalmente */
     background-image: url('../public/images/background.jpg');
+    color: white;
 }
 
 /* Contenedor general */
 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     text-align: center;
 }
 
 /* Estilo para cada elemento favorito */
 .favorite-item {
     text-align: center;
+    align-items: center;
     margin: 10px;
+    display: flex; /* Asegurando que se use flexbox */
+    flex-direction: column; /* Para apilar imágenes verticalmente */
+    justify-content: center; /* Centrar el contenido */
 }
 
 .box {
@@ -26,14 +35,20 @@ body {
     border: 2px solid purple; /* Color morado para el borde */
     margin: 10px 0;
     background-color: rgba(255, 255, 255, 0.8); /* Fondo con opacidad */
+    align-items: center;
+    border-radius: 15px; /* Bordes redondeados */
+    display: flex; /* Para centrar el contenido dentro de la caja */
+    justify-content: center;
+    flex-direction: column;
 }
 
 .image {
-    width: 100%;
-    height: 100%;
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+    max-height: 100%; /* Ajusta la altura máxima de la imagen */
     object-fit: cover;
     opacity: 0.8; /* Opacidad en las imágenes */
     transition: opacity 0.3s ease;
+    border-radius: 15px; /* Bordes redondeados para las imágenes */
 }
 
 .image:hover {
@@ -43,6 +58,7 @@ body {
 /* Estilo para el álbum */
 .album {
     margin-top: 20px;
+    align-items: center;
 }
 
 .album h3 {
@@ -57,6 +73,7 @@ body {
     overflow: hidden; /* Para ocultar el contenido que se desborda */
     border: 2px solid purple; /* Borde del carrusel */
     background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
+    border-radius: 15px; /* Bordes redondeados para el carrusel */
 }
 
 .carousel-inner {
@@ -74,6 +91,7 @@ body {
 .carousel img {
     width: 100%; /* Imagen ocupa todo el ancho del elemento */
     height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 15px; /* Bordes redondeados para las imágenes del carrusel */
 }
 
 /* Estilo para los botones del carrusel */
@@ -94,6 +112,7 @@ body {
     font-size: 18px;
     opacity: 0.7; /* Opacidad de los botones */
     transition: opacity 0.3s ease;
+    border-radius: 5px; /* Bordes redondeados para los botones */
 }
 
 .carousel-controls button:hover {
@@ -125,15 +144,7 @@ body {
         font-size: 1.2em;
     }
 }
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-.carousel {
-    position: relative;
-    margin-top: 20px;
-}
+
 .glide__slide img {
     border-radius: 10px;
     max-width: 100%;
@@ -141,6 +152,7 @@ body {
     height: auto;
     object-fit: cover; /* Mantiene la proporción de la imagen */
 }
+
 .glide__controls {
     background-color: rgba(0, 0, 255, 0.5);
     padding: 10px;
@@ -148,6 +160,7 @@ body {
     justify-content: space-between;
     border-radius: 5px;
 }
+
 .glide__controls button {
     background-color: purple;
     color: white;
@@ -156,6 +169,7 @@ body {
     padding: 10px;
     cursor: pointer;
 }
+
 .glide__controls button:hover {
     background-color: #8A2BE2;
 }
