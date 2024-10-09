@@ -7,31 +7,29 @@ body {
     background-image: url('../public/images/background.jpg');
     color: white;
 }
+
+
+
 .message-container {
     background-color: #fff;
-    border-radius: 10px;
+    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto;   /* Márgenes automáticos para centrar horizontalmente */
+    padding: 1rem;    /* Espaciado interno opcional */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 600px;
-    text-align: center;
     opacity: 20%;
-    color:black;
+    border-radius: 10px;
     line-height: 1.6;
     font-size: 16px;
+    color:black;
+    text-align: center; /* Centrar el texto dentro del div */
 }
-p {
-    line-height: 1.6;
-}
-h1 {
+
+.title {
     color: #ff69b4;
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 20px;
 }
-.signature {
-    margin-top: 30px;
-    font-style: italic;
-    color: #555;
-}
+
 /* Contenedor general */
 .container {
     width: calc(100% - 60px); /* Restamos 30px de margen en cada lado */
@@ -52,7 +50,7 @@ h1 {
 .image-container {
     width: 100%;
     max-width: 100%; /* Asegura que las imágenes ocupen todo el ancho en móviles */
-    height: 450px;
+    height: auto;
     margin-bottom: 20px;
 }
 
@@ -84,7 +82,7 @@ h1 {
     }
 
     p {
-        font-size: 25px; /* Tamaño de texto más grande para móviles */
+        font-size: 16px; /* Tamaño de texto más grande para móviles */
     }
 }
 
@@ -96,7 +94,7 @@ h1 {
 .glide__slide img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: scale-down;
     border-radius: 15px;
 }
 

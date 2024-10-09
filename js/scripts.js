@@ -3,7 +3,6 @@ window.onload = function() {
     audio.play();
 };
 
-// Inicializa el carrusel mostrando la primera imagen
-showSlide(currentSlide);
-
-setInterval(showNextItem, 4000);
+document.addEventListener('DOMContentLoaded', function () {
+    new Glide('.glide').mount();
+});
