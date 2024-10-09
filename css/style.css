@@ -7,7 +7,31 @@ body {
     background-image: url('../public/images/background.jpg');
     color: white;
 }
-
+.message-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    text-align: center;
+    opacity: 20%;
+    color:black;
+    line-height: 1.6;
+    font-size: 16px;
+}
+p {
+    line-height: 1.6;
+}
+h1 {
+    color: #ff69b4;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.signature {
+    margin-top: 30px;
+    font-style: italic;
+    color: #555;
+}
 /* Contenedor general */
 .container {
     width: calc(100% - 60px); /* Restamos 30px de margen en cada lado */
@@ -28,7 +52,7 @@ body {
 .image-container {
     width: 100%;
     max-width: 100%; /* Asegura que las imágenes ocupen todo el ancho en móviles */
-    height: auto;
+    height: 450px;
     margin-bottom: 20px;
 }
 
